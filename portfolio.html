@@ -1,0 +1,181 @@
+<html>
+<head>
+  <style type="text/css">
+    *{ text-decoration:none; margin:0; padding:0; box-sizing:border-box; }
+    body{ background-color:#fffde0; font-family: Optima; }
+
+    /* your navbar + page styles */
+    .navbar{
+      position: sticky; top: 0;
+      background: linear-gradient(90deg,#f88da1,#ffafbd);
+      padding-right: 25px; box-shadow: 0 2px 5px rgba(0,0,0,.1);
+      z-index: 1000;
+    }
+    .navdiv{ display:flex; align-items:center; justify-content:space-between; }
+    .logo{ margin-left:30px; color:#fff; font-size:20px; font-weight:bold; letter-spacing:5px; }
+    .navbar table td a{ color:#f1a9be; font-weight:bold; padding:10px 15px; border-radius:20px; transition:.3s; }
+    .navbar table td a:hover{ background-color:rgba(255,255,255,.3); }
+    h1{ color:#b9ad9b; text-align:center; font-size:36px; margin:30px 0; font-weight:bold; }
+    .large-image{ width:310px; height:auto; display:block; margin:0 auto; }
+    img{ width:200px; height:200px; border-radius:50%; margin:50px; box-shadow:3px 1px 5px #7C1C39; }
+    p{ font-size:20px; text-align:center; margin:20px 0 30px; }
+    table{ border-collapse:collapse; margin:20px auto; background:#fff; border-radius:8px; overflow:hidden; box-shadow:0 3px 6px rgba(0,0,0,.1); width:60%; }
+    th,td{ padding:12px 20px; text-align:center; }
+    th{ background:#f88da1; color:#fff; }
+    td:hover{ background:#FDE7EF; }
+    .image{ text-align:center; margin-bottom:30px; }
+
+    /* ---------- Cute Floating Chat Widget ---------- */
+    .chat-fab{
+      position:fixed; right:24px; bottom:24px; width:64px; height:64px;
+      border:none; border-radius:50%;
+      background: linear-gradient(135deg,#f88da1,#ffafbd);
+      box-shadow:0 10px 20px rgba(0,0,0,.2);
+      cursor:pointer; display:flex; align-items:center; justify-content:center;
+      transition:transform .2s, box-shadow .2s; z-index: 9999;
+    }
+    .chat-fab:hover{ transform:translateY(-2px); box-shadow:0 14px 24px rgba(0,0,0,.25); }
+    .chat-fab svg{ width:28px; height:28px; fill:#fff; }
+
+    .chat-panel{
+      position:fixed; right:24px; bottom:96px; width:340px; max-width:calc(100% - 48px);
+      background: rgba(255,255,255,.92); backdrop-filter: blur(8px);
+      border-radius:16px; box-shadow:0 12px 32px rgba(0,0,0,.18); overflow:hidden;
+      transform: translateY(12px); opacity:0; pointer-events:none;
+      transition: transform .25s ease, opacity .25s ease; z-index: 9999;
+    }
+    .chat-panel.open{ transform: translateY(0); opacity:1; pointer-events:auto; }
+
+    .chat-header{
+      background: linear-gradient(90deg,#f88da1,#ffafbd);
+      color:#fff; padding:14px 16px; display:flex; align-items:center; justify-content:space-between;
+    }
+    .chat-header h3{ margin:0; font-size:18px; letter-spacing:.5px; }
+    .chat-close{
+      background: rgba(255,255,255,.25); border:none; color:#fff; width:28px; height:28px;
+      border-radius:50%; cursor:pointer; font-size:18px; line-height:28px;
+    }
+
+    .chat-body{ padding:14px 16px 16px; }
+    .row{ display:flex; gap:10px; }
+    .chat-field{ width:100%; }
+    .chat-field label{ font-size:12px; color:#7a7a7a; display:block; margin-bottom:6px; }
+    .chat-field input,.chat-field textarea{
+      width:100%; padding:10px 12px; border-radius:10px; border:1px solid #f2b5c6;
+      outline:none; transition:border .2s, box-shadow .2s; font-family:inherit; background:#fff;
+    }
+    .chat-field input:focus,.chat-field textarea:focus{
+      border-color:#f88da1; box-shadow:0 0 0 4px rgba(248,141,161,.15);
+    }
+    .chat-actions{ display:flex; gap:10px; margin-top:12px; }
+    .chat-send{
+      flex:1; border:none; padding:10px 12px; border-radius:10px;
+      background: linear-gradient(90deg,#f88da1,#ffafbd);
+      color:#fff; font-weight:bold; cursor:pointer;
+    }
+    .chat-messenger{
+      flex:1; border:1px solid #1877f2; color:#1877f2; background:#fff; border-radius:10px;
+      padding:10px 12px; text-decoration:none; text-align:center; font-weight:600;
+    }
+  </style>
+  <title>MY PORTFOLIO</title>
+</head>
+<body bgcolor="#fffde0">
+  <hr>
+  <nav class="navbar">
+    <div class="navdiv">
+      <div class="logo">Karylle Bachicha</div>
+      <div class="td">
+        <table border="0" cellpadding="20" cellspacing="0">
+          <tr>
+            <td><a href="portfolio.html">HOME</a></td>
+            <td><a href="aboutme.html">ABOUT</a></td>
+            <td><a href="CONTACT.html">CONTACT</a></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </nav>
+
+  <h1>RYLLE'S PORTFOLIO</h1>
+
+  <div class="image">
+    <img src="C:\Users\kaeri\Downloads\ff35e97e-8d34-45ad-a33d-6848915bf19f.jpg" width="200" alt="uwu" class="large-image">
+  </div>
+
+  <table border="0">
+    <tr>
+      <td><a href="info.html">PERSONAL</a></td>
+      <td><a href="education.html">EDUCATION</a></td>
+      <td><a href="gallery.html">GALLERY</a></td>
+      <td><a href="extra.html">EXTRA</a></td>
+      <td><a href="resume.html">RESUME</a></td>
+    </tr>
+  </table>
+
+  <p>Welcome to my portfolio!!</p>
+  <p>I am a web developer in training, I hope you will have fun around here!!</p>
+
+  <!-- Floating Chat Button -->
+  <button class="chat-fab" id="chatFab" aria-label="Chat with me">
+    <!-- simple chat icon -->
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M4 3h16a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H8l-4 4V4a1 1 0 0 1 1-1Z"></path>
+    </svg>
+  </button>
+
+  <!-- Chat Panel -->
+  <div class="chat-panel" id="chatPanel">
+    <div class="chat-header">
+      <h3>Chat with Rylle ✨</h3>
+      <button id="chatClose" class="chat-close" aria-label="Close">×</button>
+    </div>
+    <form id="chatForm" class="chat-body">
+      <div class="row">
+        <div class="chat-field">
+          <label for="cName">Name</label>
+          <input id="cName" type="text" placeholder="Your name">
+        </div>
+        <div class="chat-field">
+          <label for="cEmail">Email</label>
+          <input id="cEmail" type="email" placeholder="you@email.com">
+        </div>
+      </div>
+      <div class="chat-field" style="margin-top:10px;">
+        <label for="cMsg">Message</label>
+        <textarea id="cMsg" rows="4" placeholder="Hi Rylle! I loved your portfolio…"></textarea>
+      </div>
+      <div class="chat-actions">
+        <button type="submit" class="chat-send">Send Email</button>
+        <a class="chat-messenger" href="https://m.me/kaeri.ryle" target="_blank" rel="noopener">Messenger</a>
+      </div>
+    </form>
+  </div>
+
+  <!-- Tiny JS for interactivity -->
+  <script>
+    (function(){
+      const fab = document.getElementById('chatFab');
+      const panel = document.getElementById('chatPanel');
+      const closeBtn = document.getElementById('chatClose');
+      const form = document.getElementById('chatForm');
+
+      fab.addEventListener('click', () => panel.classList.toggle('open'));
+      closeBtn.addEventListener('click', () => panel.classList.remove('open'));
+
+      form.addEventListener('submit', function(e){
+        e.preventDefault();
+        const name = document.getElementById('cName').value.trim();
+        const email = document.getElementById('cEmail').value.trim();
+        const msg = document.getElementById('cMsg').value.trim();
+        const subject = encodeURIComponent(`Portfolio inquiry from ${name || 'visitor'}`);
+        const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${msg}`);
+        // 👉 Replace with your real email:
+        window.location.href = `mailto:karylle.bachicha5@gmail.com?subject=${subject}&body=${body}`;
+        panel.classList.remove('open');
+        form.reset();
+      });
+    })();
+  </script>
+</body>
+</html>
